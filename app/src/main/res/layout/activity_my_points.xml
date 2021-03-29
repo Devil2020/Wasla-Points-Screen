@@ -77,6 +77,8 @@
                 android:layout_marginStart="20dp"
                 android:fontFamily="@font/ubuntu_bold"
                 android:text="2,510"
+                android:maxLength="5"
+                android:singleLine="true"
                 android:textColor="@color/black"
                 android:textSize="35sp"
                 app:layout_constraintBottom_toBottomOf="@id/coin_iv"
