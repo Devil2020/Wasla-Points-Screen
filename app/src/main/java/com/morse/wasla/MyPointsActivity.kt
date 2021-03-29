@@ -15,6 +15,7 @@ class MyPointsActivity : AppCompatActivity() {
         setContentView(binding.root)
         setupTabs()
         valueAnimate(2510)
+        listeners ()
     }
 
     private fun setupTabs() {
@@ -29,6 +30,20 @@ class MyPointsActivity : AppCompatActivity() {
         }
         valueAnimation.setDuration(4000)
         valueAnimation.start()
+    }
+
+    private fun listeners () {
+        binding.whiteIv.apply {
+            setOnLongClickListener {
+                valueAnimate(5020)
+                true
+            }
+
+            setOnClickListener {
+                valueAnimate(2510)
+            }
+
+        }
     }
 
 }
