@@ -3,4 +3,5 @@
     <string name="dollars_name">Add Fakka</string>
     <string name="send_name">Send Mail</string>
     <string name="donates_name">Donation</string>
+    <string name="button">Button</string>
 </resources>

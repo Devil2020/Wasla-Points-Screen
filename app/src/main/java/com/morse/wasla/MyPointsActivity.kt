@@ -1,9 +1,11 @@
 package com.morse.wasla
 
 import android.animation.ValueAnimator
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.morse.wasla.databinding.ActivityMyPointsBinding
+import com.morse.wasla.motionlayout.BasicInfoAboutMotionLayoutActivity
 
 class MyPointsActivity : AppCompatActivity() {
 
@@ -44,6 +46,11 @@ class MyPointsActivity : AppCompatActivity() {
             }
 
         }
+
+        binding.cardId3.cardIm.setOnClickListener {
+            startActivity(Intent(this , BasicInfoAboutMotionLayoutActivity::class.java))
+        }
     }
+
 
 }
