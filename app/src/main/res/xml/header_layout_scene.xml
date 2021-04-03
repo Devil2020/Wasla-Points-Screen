@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <Transition
+        app:constraintSetEnd="@+id/end"
+        app:constraintSetStart="@+id/start"
+        app:duration="400">
+
+<!--        <OnSwipe app:touchAnchorSide="right"-->
+<!--            app:touchAnchorId="@id/your_points_wallet"-->
+<!--            app:dragDirection="dragRight"/>-->
+
+        <OnClick app:targetId="@id/your_points_wallet" app:clickAction="toggle"/>
+
+    </Transition>
+
+    <ConstraintSet android:id="@+id/start">
+
+        <Constraint
+            android:id="@+id/your_points_wallet"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginHorizontal="15dp"
+            android:layout_marginTop="25dp"
+            android:background="@drawable/gray_background_rounded"
+            app:layout_constraintTop_toBottomOf="@id/back_bt" />
+        <Constraint
+            android:id="@+id/gray_iv"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginBottom="5dp"
+            android:src="@drawable/circule_gray_background"
+            app:layout_constraintBottom_toBottomOf="@id/your_points_wallet"
+            app:layout_constraintEnd_toEndOf="@id/your_points_wallet"
+            app:layout_constraintStart_toEndOf="@id/pts_tv"
+            app:layout_constraintHorizontal_bias="1"/>
+        <Constraint
+            android:id="@+id/white_iv"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:clickable="true"
+            android:elevation="8dp"
+            android:focusable="true"
+            android:src="@drawable/circule_white_background"
+            app:layout_constraintBottom_toBottomOf="@id/gray_iv"
+            app:layout_constraintCircleRadius="50dp"
+            app:layout_constraintEnd_toEndOf="@id/gray_iv"
+            app:layout_constraintStart_toStartOf="@id/gray_iv"
+            app:layout_constraintTop_toTopOf="@id/gray_iv" />
+        <Constraint
+            android:id="@+id/total_points_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/ubuntu_bold"
+            android:maxLength="5"
+            android:singleLine="true"
+            app:layout_constraintHorizontal_bias="1"
+            android:text="2,510"
+            app:layout_constraintStart_toEndOf="@id/coin_iv"
+            app:layout_constraintEnd_toStartOf="@id/gray_iv"
+            app:layout_constraintTop_toTopOf="@id/coin_iv"
+            app:layout_constraintBottom_toBottomOf="@id/coin_iv"
+            android:textColor="@color/black"
+            android:textSize="35sp"/>
+        <Constraint
+            android:id="@+id/coin_iv"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/ic_singapore_dollar"
+            app:layout_constraintTop_toTopOf="@id/your_points_wallet"
+            app:layout_constraintBottom_toBottomOf="@id/your_points_wallet"
+            app:layout_constraintEnd_toStartOf="@id/total_points_tv"
+            app:layout_constraintStart_toStartOf="@id/your_points_wallet"/>
+        <Constraint
+            android:id="@+id/pts_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/ubuntu_medium"
+            android:text="pts"
+            android:textAllCaps="true"
+            android:lines="1"
+            android:ellipsize="end"
+            app:layout_constraintEnd_toStartOf="@id/gray_iv"
+            android:textSize="16sp"
+            app:layout_constraintTop_toBottomOf="@id/total_points_tv"
+            app:layout_constraintStart_toEndOf="@id/total_points_tv"/>
+
+    </ConstraintSet>
+
+    <ConstraintSet android:id="@+id/end">
+
+        <Constraint
+            android:id="@+id/your_points_wallet"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_marginHorizontal="15dp"
+            android:layout_marginStart="100dp"
+            android:background="@drawable/gray_background_rounded"
+            app:layout_constraintBottom_toBottomOf="@id/back_bt"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/title_tv"
+            app:layout_constraintTop_toTopOf="@id/back_bt" />
+        <Constraint
+            android:id="@+id/gray_iv"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginHorizontal="2dp"
+            android:src="@drawable/circule_gray_background"
+            app:layout_constraintTop_toTopOf="@id/your_points_wallet"
+            app:layout_constraintBottom_toBottomOf="@id/your_points_wallet"
+            app:layout_constraintEnd_toEndOf="@id/your_points_wallet"
+            android:layout_marginEnd="15dp"
+            app:layout_constraintStart_toEndOf="@id/pts_tv"
+            app:layout_constraintHorizontal_bias="1"/>
+        <Constraint
+            android:id="@+id/white_iv"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:clickable="true"
+            android:elevation="8dp"
+            android:focusable="true"
+            android:src="@drawable/circule_white_background"
+            app:layout_constraintBottom_toBottomOf="@id/gray_iv"
+            app:layout_constraintCircleRadius="15dp"
+            app:layout_constraintEnd_toEndOf="@id/gray_iv"
+            app:layout_constraintStart_toStartOf="@id/gray_iv"
+            app:layout_constraintTop_toTopOf="@id/gray_iv" />
+        <Constraint
+            android:id="@+id/total_points_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/ubuntu_bold"
+            android:maxLength="5"
+            android:singleLine="true"
+            android:text="2,510"
+            app:layout_constraintStart_toEndOf="@id/coin_iv"
+            app:layout_constraintEnd_toStartOf="@id/gray_iv"
+            app:layout_constraintTop_toTopOf="@id/your_points_wallet"
+            app:layout_constraintBottom_toBottomOf="@id/your_points_wallet"
+            android:textColor="@color/black"
+            android:textSize="12sp"/>
+        <Constraint
+            android:id="@+id/coin_iv"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/ic_singapore_dollar"
+            app:layout_constraintTop_toTopOf="@id/your_points_wallet"
+            app:layout_constraintBottom_toBottomOf="@id/your_points_wallet"
+            app:layout_constraintEnd_toStartOf="@id/total_points_tv"
+            android:layout_marginStart="5dp"
+            app:layout_constraintStart_toStartOf="@id/your_points_wallet"/>
+        <Constraint
+            android:id="@+id/pts_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/ubuntu_medium"
+            android:text="pts"
+            android:textAllCaps="true"
+            android:lines="1"
+            android:ellipsize="end"
+            app:layout_constraintEnd_toStartOf="@id/gray_iv"
+            android:textSize="16sp"
+            android:layout_marginBottom="3dp"
+            app:layout_constraintBottom_toBottomOf="@id/your_points_wallet"
+            app:layout_constraintStart_toEndOf="@id/total_points_tv"/>
+
+    </ConstraintSet>
+
+</MotionScene>
