@@ -1,17 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <MotionScene xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:motion="http://schemas.android.com/apk/res-auto">
 
     <Transition
         app:constraintSetEnd="@+id/end"
         app:constraintSetStart="@+id/start"
-        app:duration="400">
+        app:duration="1000"
+        app:motionInterpolator="linear">
 
-<!--        <OnSwipe app:touchAnchorSide="right"-->
-<!--            app:touchAnchorId="@id/your_points_wallet"-->
-<!--            app:dragDirection="dragRight"/>-->
+        <OnSwipe
+            motion:dragDirection="dragUp"
+            motion:touchAnchorId="@+id/your_points_wallet"
+            motion:touchAnchorSide="bottom" />
 
-        <OnClick app:targetId="@id/your_points_wallet" app:clickAction="toggle"/>
+<!--        <OnClick app:targetId="@id/your_points_wallet" app:clickAction="toggle"/>-->
 
     </Transition>
 

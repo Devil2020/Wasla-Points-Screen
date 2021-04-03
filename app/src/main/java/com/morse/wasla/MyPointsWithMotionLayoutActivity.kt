@@ -21,8 +21,8 @@ class MyPointsWithMotionLayoutActivity : AppCompatActivity() {
     }
 
     private fun setupTabs() {
-        binding.bodyLayout.myPointsTl.addTab(binding.bodyLayout.myPointsTl.newTab().setText("Spend Points"))
-        binding.bodyLayout.myPointsTl.addTab(binding.bodyLayout.myPointsTl.newTab().setText("My Activities"))
+        binding.headerTitle.my_points_tl.addTab(binding.headerTitle.my_points_tl.newTab().setText("Spend Points"))
+        binding.headerTitle.my_points_tl.addTab(binding.headerTitle.my_points_tl.newTab().setText("My Activities"))
     }
 
     private fun valueAnimate(toValue: Int) {
