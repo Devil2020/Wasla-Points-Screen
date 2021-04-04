@@ -99,45 +99,6 @@
                 bind:cardimage="@{@drawable/ic_donate}"
                 bind:cardname="@{@string/donates_name}" />
 
-            <include
-                android:id="@+id/card_id7"
-                layout="@layout/card_item_layout"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="30dp"
-                app:layout_constraintCircleRadius="20dp"
-                app:layout_constraintEnd_toStartOf="@id/card_id2"
-                app:layout_constraintHorizontal_chainStyle="spread"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/card_id6"
-                bind:cardimage="@{@drawable/ic_dollars}"
-                bind:cardname="@{@string/dollars_name}" />
-
-            <include
-                android:id="@+id/card_id8"
-                layout="@layout/card_item_layout"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="30dp"
-                app:layout_constraintCircleRadius="20dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@id/card_id1"
-                app:layout_constraintTop_toBottomOf="@id/card_id6"
-                bind:cardimage="@{@drawable/ic_send_mail}"
-                bind:cardname="@{@string/send_name}" />
-
-            <include
-                android:id="@+id/card_id9"
-                layout="@layout/card_item_layout"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="30dp"
-                app:layout_constraintCircleRadius="20dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/card_id7"
-                bind:cardimage="@{@drawable/ic_donate}"
-                bind:cardname="@{@string/donates_name}" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
