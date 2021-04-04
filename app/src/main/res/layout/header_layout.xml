@@ -3,10 +3,12 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/headerRoot"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="350dp"
     app:applyMotionScene="true"
+    app:motionDebug="SHOW_ALL"
+    app:showPaths="true"
     android:fitsSystemWindows="false"
-    app:layout_scrollFlags="scroll|enterAlways|snap|exitUntilCollapsed"
+    app:layout_scrollFlags="scroll"
     app:layoutDescription="@xml/header_layout_scene">
 
     <ImageView
@@ -17,7 +19,6 @@
         android:layout_marginTop="10dp"
         app:layout_collapseMode="pin"
         android:layout_marginBottom="10dp"
-
         android:src="@drawable/ic_baseline_keyboard_backspace_24"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />

@@ -21,6 +21,17 @@
     <ConstraintSet android:id="@+id/start">
 
         <Constraint
+            android:id="@+id/headerRoot"
+            android:layout_width="match_parent"
+            android:layout_height="350dp"
+            app:applyMotionScene="true"
+            app:motionDebug="SHOW_ALL"
+            app:showPaths="true"
+            android:fitsSystemWindows="false"
+            app:layout_scrollFlags="scroll"
+            app:layoutDescription="@xml/header_layout_scene" />
+
+        <Constraint
             android:id="@+id/your_points_wallet"
             android:layout_width="match_parent"
             android:layout_height="200dp"
@@ -95,6 +106,16 @@
     </ConstraintSet>
 
     <ConstraintSet android:id="@+id/end">
+        <Constraint
+            android:id="@+id/headerRoot"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            app:applyMotionScene="true"
+            app:motionDebug="SHOW_ALL"
+            app:showPaths="true"
+            android:fitsSystemWindows="false"
+            app:layout_scrollFlags="scroll"
+            app:layoutDescription="@xml/header_layout_scene" />
 
         <Constraint
             android:id="@+id/your_points_wallet"
